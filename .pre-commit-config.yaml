@@ -1,0 +1,14 @@
+repos:
+  - repo: local
+    hooks:
+      - id: biome-check
+        name: biome check
+        entry: npx @biomejs/biome check src/ tests/
+        language: system
+        pass_filenames: false
+
+      - id: vitest
+        name: vitest
+        entry: npx vitest run
+        language: system
+        pass_filenames: false

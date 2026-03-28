@@ -1,0 +1,37 @@
+{
+  "name": "sqlx-format",
+  "version": "0.1.0",
+  "description": "Formatter for Dataform SQLX files",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "sqlx-format": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "format": "biome format --write src/ tests/",
+    "check": "biome check src/ tests/"
+  },
+  "dependencies": {
+    "commander": "^14.0.3",
+    "js-beautify": "^1.15.4",
+    "moo": "^0.5.3",
+    "sql-formatter": "^15.7.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.9",
+    "@types/js-beautify": "^1.14.3",
+    "@types/moo": "^0.5.10",
+    "@types/node": "^25.5.0",
+    "@vitest/coverage-v8": "^4.1.2",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT"
+}

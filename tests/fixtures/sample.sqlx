@@ -1,0 +1,11 @@
+config {
+    type: "table",
+    bigquery: {
+        partitionBy: "date"
+    },
+    schema: "reporting",
+    description: "Weekly aggregated stats",
+    tags: ["daily"]
+}
+
+select col1, col2, col3 from ${ref("source_table")} where col1 = 'test' and col2 > 100 group by col1, col2 order by col3 desc

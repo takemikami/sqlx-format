@@ -1,0 +1,15 @@
+- id: sqlx-format
+  name: sqlx-format
+  description: Format Dataform SQLX files
+  entry: sqlx-format
+  language: node
+  types: [file]
+  files: \.sqlx$
+
+- id: sqlx-format-check
+  name: sqlx-format-check
+  description: Check if Dataform SQLX files are formatted
+  entry: sqlx-format --check
+  language: node
+  types: [file]
+  files: \.sqlx$

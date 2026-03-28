@@ -143,6 +143,30 @@ Place a `.sqlxformatrc` file (JSON format) at the project root. The config file 
 
 Any [sql-formatter options](https://www.npmjs.com/package/sql-formatter) can be passed directly via `sqlFormatter`.
 
+## Usage (pre-commit)
+
+You can use sqlx-format as a [pre-commit](https://pre-commit.com/) hook to automatically format SQLX files on commit.
+
+Add the following to your `.pre-commit-config.yaml`:
+
+```yaml
+repos:
+  - repo: https://github.com/takemikami/sqlx-format
+    rev: v0.1.0  # specify the version to use
+    hooks:
+      - id: sqlx-format
+```
+
+To check formatting without modifying files (useful for CI), use the `sqlx-format-check` hook instead:
+
+```yaml
+repos:
+  - repo: https://github.com/takemikami/sqlx-format
+    rev: v0.1.0
+    hooks:
+      - id: sqlx-format-check
+```
+
 ## Development
 
 ```bash
